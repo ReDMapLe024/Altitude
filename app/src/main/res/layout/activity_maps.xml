@@ -9,151 +9,222 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_margin="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="0.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        map:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        map:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/TV_Latitude"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/TV_Longitude"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/TV_Altitude"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textSize="26sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="370dp"
-        android:orientation="horizontal"
-        map:layout_constraintHorizontal_bias="1.0"
         map:layout_constraintLeft_toLeftOf="parent"
         map:layout_constraintRight_toRightOf="parent"
         map:layout_constraintTop_toTopOf="parent">
 
-        <fragment
-            android:id="@+id/map"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            map:layout_constraintHorizontal_bias="0.545"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toTopOf="parent">
+
+            <fragment
+
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                map:layout_constraintBottom_toTopOf="@+id/button_calculate"
+                map:layout_constraintHorizontal_bias="0.0"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintVertical_bias="0.109"
+                tools:context="com.example.phifilli.altitude.MapsActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginStart="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="0dp"
-            android:layout_weight="1"
-            map:layout_constraintBottom_toTopOf="@+id/button_calculate"
-            map:layout_constraintHorizontal_bias="0.0"
-            map:layout_constraintLeft_toLeftOf="parent"
-            map:layout_constraintRight_toRightOf="parent"
-            map:layout_constraintTop_toTopOf="parent"
-            map:layout_constraintVertical_bias="0.109"
-            tools:context="com.example.phifilli.altitude.MapsActivity" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="0.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        map:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        map:layout_constraintVertical_bias="0.0">
-
-        <Button
-            android:id="@+id/button_calculate"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:background="@color/colorPrimary"
-            android:text="Find Me!"
-            android:textColor="@android:color/background_light"
+            android:layout_weight="4"
+            android:orientation="vertical"
             map:layout_constraintBottom_toBottomOf="parent"
             map:layout_constraintLeft_toLeftOf="parent"
             map:layout_constraintRight_toRightOf="parent"
-            map:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-    </LinearLayout>
+            map:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:layout_margin="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        map:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        map:layout_constraintVertical_bias="0.0">
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.2"
+                android:orientation="vertical"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintHorizontal_bias="1.0"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                map:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Latitude"
-            android:textAlignment="center" />
+                <Button
+                    android:id="@+id/button_calculate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Find Me!"
+                    android:textColor="@android:color/background_light"
+                    map:layout_constraintBottom_toBottomOf="parent"
+                    map:layout_constraintLeft_toLeftOf="parent"
+                    map:layout_constraintRight_toRightOf="parent"
+                    map:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Longitude"
-            android:textAlignment="center" />
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                map:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Altitude"
-            android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Latitude"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Longitude"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Elevation (m)"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintHorizontal_bias="0.0"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                map:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/TV_Latitude"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/TV_Longitude"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/TV_Altitude"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintHorizontal_bias="0.0"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                map:layout_constraintVertical_bias="0.2">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/textView"
+                    android:layout_alignLeft="@+id/textview"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/textView"
+                    android:layout_alignStart="@+id/textview"
+                    android:layout_below="@+id/button"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/circular_progress_bar" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
